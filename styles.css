@@ -18,6 +18,12 @@ body {
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 .principal {
@@ -43,6 +49,7 @@ body {
     display: block;
     text-decoration: none;
     margin-bottom: 1em;
+    text-align: center;
 }
 
 .botao__secundario {
@@ -159,21 +166,28 @@ body {
     color: var(--cor-de-fundo);
 }
 
-/* ========== RESPONSIVIDADE PARA CELULAR ========== */
+/* ========== RESPONSIVIDADE PARA TELAS MENORES ========== */
 @media (max-width: 768px) {
 
     .container {
         display: flex;
         flex-direction: column;
+        align-items: center;
         height: auto;
+        padding: 2em 1em;
     }
 
-    .container__caixa {
-        margin: 2em 1em;
+    .container__caixa,
+    .container__descricao,
+    .secundario {
+        margin: 1em;
+        padding: 1em;
     }
 
     .container__titulo {
         font-size: 24px;
+        text-align: center;
+        max-width: 100%;
     }
 
     .container__imagem {
@@ -189,7 +203,7 @@ body {
 
     .secundario {
         flex-direction: column;
-        margin: 2em 1em;
+        align-items: center;
     }
 
     .secundario__imagem {
@@ -200,6 +214,7 @@ body {
     .descricao__titulo {
         font-size: 32px;
         text-align: center;
+        word-wrap: break-word;
     }
 
     .descricao__texto {
@@ -216,6 +231,10 @@ body {
         font-size: 24px;
     }
 
+    .dispositivos__titulo {
+        font-size: 32px;
+    }
+
     .rodape__lista {
         flex-direction: column;
         align-items: center;
@@ -228,5 +247,20 @@ body {
 
     .container__botao {
         width: 100%;
+    }
+}
+
+/* Responsividade extra para telas muito pequenas */
+@media (max-width: 480px) {
+    .descricao__titulo {
+        font-size: 24px;
+    }
+
+    .lista__item {
+        font-size: 20px;
+    }
+
+    .dispositivos__titulo {
+        font-size: 28px;
     }
 }
