@@ -1,4 +1,4 @@
-:root{
+:root {
     --branco-principal: #FFFFFF;
     --cinza-secundario: #C0C0C0;
     --botao-azul: #167BF7;
@@ -15,7 +15,7 @@ body {
     font-weight: 400;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
@@ -24,6 +24,7 @@ body {
     background-image: url("img/Background.png");
     background-repeat: no-repeat;
     background-size: contain;
+    display: flex;
     align-items: center;
     text-align: center;
 }
@@ -42,13 +43,11 @@ body {
     display: block;
     text-decoration: none;
     margin-bottom: 1em;
-
 }
 
 .botao__secundario {
     background-color: transparent;
     border: 2px solid var(--branco-principal);
-    
 }
 
 .container__aviso {
@@ -71,12 +70,12 @@ body {
 
 .secundario__imagem {
     width: 80%;
-
 }
 
 .secundario {
     align-items: center;
     margin: 0 10em;
+    display: flex;
 }
 
 .descricao__titulo {
@@ -124,35 +123,28 @@ body {
     justify-content: center;
     list-style-type: none;
     margin: 1em;
-    
-
 }
 
 .rodape {
     text-align: center;
-    margin: 5em 3m;
+    margin: 5em 3em;
 }
 
-
-.lista__link a{
-   text-decoration: none;
-   color: var(--branco-principal);
-   margin-left: 1em;
-
-   
+.lista__link a {
+    text-decoration: none;
+    color: var(--branco-principal);
+    margin-left: 1em;
 }
 
 .rodape__texto {
-    margin: 1em 0;
+    margin: 1em 0 1em 0;
     color: var(--cinza-secundario);
     font-size: 14px;
-
 }
 
 .rodape__logo {
     margin-bottom: 2em;
 }
-
 
 .lista__link a:hover {
     color: var(--botao-azul);
@@ -165,4 +157,76 @@ body {
 .container__botao:hover {
     background-color: var(--botao-azul-efeito);
     color: var(--cor-de-fundo);
+}
+
+/* ========== RESPONSIVIDADE PARA CELULAR ========== */
+@media (max-width: 768px) {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .container__caixa {
+        margin: 2em 1em;
+    }
+
+    .container__titulo {
+        font-size: 24px;
+    }
+
+    .container__imagem {
+        width: 80%;
+        margin: 1em auto;
+    }
+
+    .principal {
+        background-size: cover;
+        background-position: center;
+        padding: 2em 1em;
+    }
+
+    .secundario {
+        flex-direction: column;
+        margin: 2em 1em;
+    }
+
+    .secundario__imagem {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+
+    .descricao__titulo {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .descricao__texto {
+        text-align: center;
+    }
+
+    .dispositivos__lista {
+        flex-direction: column;
+        gap: 1em;
+        margin: 2em 0;
+    }
+
+    .lista__item {
+        font-size: 24px;
+    }
+
+    .rodape__lista {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5em;
+    }
+
+    .rodape {
+        margin: 2em 1em;
+    }
+
+    .container__botao {
+        width: 100%;
+    }
 }
